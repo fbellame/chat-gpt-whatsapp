@@ -8,22 +8,30 @@ Start with Python:
 export OPENAI_API_KEY=[Your OpenAI API key]
 export CHAT_TOKEN=[base64_generated_token]
 export MY_ORGANISATION=[Your OpenAI organisation]
-cd app
+```
 
+```python
+cd app
 pip3 install -r requirements.txt
 
 python3 gpt-chat-server.py
 ```
 
-Build and run docker image:
+To change the response lenght (default 30 tokens), you can also export:
 ```sh
+export MAX_TOKEN=[number]
+```
+
+
+Build and run docker image:
+```docker
 docker build -t [docker-user]/chat-gpt-whatsapp:latest .
 
 docker run -p 80:80 -e OPENAI_API_KEY="" -e CHAT_TOKEN="" -e MY_ORGANISATION="" [docker-user]/chat-gpt-whatsapp:latest
 ```
 
 You can also use the prebuild image:
-```sh
+```docker
 docker run -p 80:80 -e OPENAI_API_KEY="" -e CHAT_TOKEN="" -e MY_ORGANISATION="" faridbellameche/chat-gpt-whatsapp:latest
 ```
 
