@@ -9,7 +9,7 @@ USAGE_MESSAGE = "Welcome to the chat GPT app! Call POST /chat?token=[CHAT_TOKEN]
 GPT_MODEL = "text-davinci-003"
 MY_ORGANISATION = "MY_ORGANISATION"
 CHAT_TOKEN = os.getenv("CHAT_TOKEN")
-MAX_TOKEN = os.getenv("MAX_TOKEN", default=30)
+MAX_TOKEN = int(os.getenv("MAX_TOKEN", default=30))
 
 app = Flask(__name__)
 openai.api_key = os.getenv(OPENAI_API_KEY)
