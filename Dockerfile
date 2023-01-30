@@ -9,7 +9,7 @@ WORKDIR /app
 
 ENV OPENAI_API_KEY=""
 ENV CHAT_TOKEN=""
-ENV MY_ORGANISATION="org-No2jCW6AjNhdk1CfkxfnZqdH"
+ENV MY_ORGANISATION=""
 
 RUN python3 -m pip install --upgrade pip
 
