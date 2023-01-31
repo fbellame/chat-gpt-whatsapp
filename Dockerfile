@@ -1,5 +1,5 @@
 # start by pulling the python image
-FROM python:3.9
+FROM amancevice/pandas:alpine
 
 # copy the requirements file into the image
 COPY ./app/requirements.txt /app/requirements.txt
